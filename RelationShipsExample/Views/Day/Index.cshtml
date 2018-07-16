@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RelationShipsExample.Models.Day>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Todos los días programados</h2>
+
+<p>
+    @Html.ActionLink("Agregar nuevo", "Create", null, new { @class = "btn btn-default"})
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>Acciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.DayId }, new { @class = "btn btn-warning"}) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.DayId }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.DayId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

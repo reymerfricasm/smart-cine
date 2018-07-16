@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SmartCinetModelStoreContainer" CdmEntityContainer="SmartCinetEntities">
+    <EntitySetMapping Name="Actor">
+      <EntityTypeMapping TypeName="SmartCinetModel.Actor">
+        <MappingFragment StoreEntitySet="Actor">
+          <ScalarProperty Name="ActorId" ColumnName="ActorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cinema">
+      <EntityTypeMapping TypeName="SmartCinetModel.Cinema">
+        <MappingFragment StoreEntitySet="Cinema">
+          <ScalarProperty Name="CinemaId" ColumnName="CinemaId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classification">
+      <EntityTypeMapping TypeName="SmartCinetModel.Classification">
+        <MappingFragment StoreEntitySet="Classification">
+          <ScalarProperty Name="ClassificationId" ColumnName="ClassificationId" />
+          <ScalarProperty Name="Audience" ColumnName="Audience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Day">
+      <EntityTypeMapping TypeName="SmartCinetModel.Day">
+        <MappingFragment StoreEntitySet="Day">
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Director">
+      <EntityTypeMapping TypeName="SmartCinetModel.Director">
+        <MappingFragment StoreEntitySet="Director">
+          <ScalarProperty Name="DirectorId" ColumnName="DirectorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genre">
+      <EntityTypeMapping TypeName="SmartCinetModel.Genre">
+        <MappingFragment StoreEntitySet="Genre">
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movie">
+      <EntityTypeMapping TypeName="SmartCinetModel.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Classification_ClassificationId" ColumnName="Classification_ClassificationId" />
+          <ScalarProperty Name="Genre_GenreId" ColumnName="Genre_GenreId" />
+          <ScalarProperty Name="Studio_StudioId" ColumnName="Studio_StudioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoviePerCinema">
+      <EntityTypeMapping TypeName="SmartCinetModel.MoviePerCinema">
+        <MappingFragment StoreEntitySet="MoviePerCinema">
+          <ScalarProperty Name="MoviePerCinemaId" ColumnName="MoviePerCinemaId" />
+          <ScalarProperty Name="Actor_ActorId" ColumnName="Actor_ActorId" />
+          <ScalarProperty Name="Cinema_CinemaId" ColumnName="Cinema_CinemaId" />
+          <ScalarProperty Name="Room_RoomId" ColumnName="Room_RoomId" />
+          <ScalarProperty Name="Day_DayId" ColumnName="Day_DayId" />
+          <ScalarProperty Name="Schelude_ScheludeId" ColumnName="Schelude_ScheludeId" />
+          <ScalarProperty Name="Director_DirectorId" ColumnName="Director_DirectorId" />
+          <ScalarProperty Name="Movie_MovieId" ColumnName="Movie_MovieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room">
+      <EntityTypeMapping TypeName="SmartCinetModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Cinema_CinemaId" ColumnName="Cinema_CinemaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schelude">
+      <EntityTypeMapping TypeName="SmartCinetModel.Schelude">
+        <MappingFragment StoreEntitySet="Schelude">
+          <ScalarProperty Name="ScheludeId" ColumnName="ScheludeId" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Scheludes" ColumnName="Scheludes" />
+          <ScalarProperty Name="Cinema_CinemaId" ColumnName="Cinema_CinemaId" />
+          <ScalarProperty Name="Day_DayId" ColumnName="Day_DayId" />
+          <ScalarProperty Name="Room_RoomId" ColumnName="Room_RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Studio">
+      <EntityTypeMapping TypeName="SmartCinetModel.Studio">
+        <MappingFragment StoreEntitySet="Studio">
+          <ScalarProperty Name="StudioId" ColumnName="StudioId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SmartCinetModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

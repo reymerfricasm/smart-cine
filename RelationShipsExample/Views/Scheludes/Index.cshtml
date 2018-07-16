@@ -1,0 +1,58 @@
+﻿@model IEnumerable<RelationShipsExample.Models.Schelude>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Shift)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scheludes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cinema.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day.Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Room.Number)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shift)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scheludes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cinema.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Day.Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Room.Number)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ScheludeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ScheludeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ScheludeId })
+        </td>
+    </tr>
+}
+
+</table>

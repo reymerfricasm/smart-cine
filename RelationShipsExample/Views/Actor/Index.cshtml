@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RelationShipsExample.Models.Actor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="">Lista de actores</h2>
+
+<p>
+    @Html.ActionLink("Agregar actor", "Create", null, new { @class = "btn btn-default" })
+</p>
+<table class="table table-bordered table-hover table-responsive table-striped">
+    <tr>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th class="text-center">Acciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td class="text-center">
+            @Html.ActionLink("Editar", "Edit", new { id=item.ActorId }, new { @class = "btn btn-warning"}) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.ActorId }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ActorId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

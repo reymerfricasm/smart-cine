@@ -1,0 +1,75 @@
+﻿@model RelationShipsExample.Models.MoviePerCinema
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MoviePerCinema</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cinema.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cinema.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day.Days)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day.Days)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Director.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movie.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movie.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Schelude.Scheludes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Schelude.Scheludes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MoviePerCinemaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

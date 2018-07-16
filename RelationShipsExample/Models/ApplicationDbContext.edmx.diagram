@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d54a67c3e87c455783002b2329a726d6" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartCinetModel.Actor" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Cinema" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Classification" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Day" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Director" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Genre" Width="1.5" PointX="0.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Movie" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.MoviePerCinema" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Room" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Schelude" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.Studio" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartCinetModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Actor_Actor_ActorId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Cinema_Cinema_CinemaId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Room_dbo_Cinema_Cinema_CinemaId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Schelude_dbo_Cinema_Cinema_CinemaId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Movie_dbo_Classification_Classification_ClassificationId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Day_Day_DayId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Schelude_dbo_Day_Day_DayId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Director_Director_DirectorId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Movie_dbo_Genre_Genre_GenreId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Movie_dbo_Studio_Studio_StudioId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Movie_Movie_MovieId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Room_Room_RoomId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_MoviePerCinema_dbo_Schelude_Schelude_ScheludeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartCinetModel.FK_dbo_Schelude_dbo_Room_Room_RoomId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

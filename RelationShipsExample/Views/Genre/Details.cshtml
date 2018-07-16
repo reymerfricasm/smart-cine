@@ -1,0 +1,26 @@
+﻿@model RelationShipsExample.Models.Genre
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles de <b>@Model.Type</b></h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.GenreId }, new { @class = "btn btn-danger"}) |
+    @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-warning"})
+</p>

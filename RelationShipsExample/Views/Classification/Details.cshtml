@@ -1,0 +1,26 @@
+﻿@model RelationShipsExample.Models.Classification
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles de la clasificación <b>@Model.Audience</b></h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Audience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Audience)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ClassificationId }, new { @class = "btn btn-danger"}) |
+    @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-warning"})
+</p>

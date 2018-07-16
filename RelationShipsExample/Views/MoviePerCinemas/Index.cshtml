@@ -1,0 +1,108 @@
+﻿@model IEnumerable<RelationShipsExample.Models.MoviePerCinema>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="">
+    @using (Html.BeginForm("Search", "MoviePerCinemas", FormMethod.Get))
+    {
+        <div class="form-group well-lg">
+            <div class="col-md-10">
+                <label class="">Filtrar por cines</label>
+                @Html.DropDownList("Cinema", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group well-lg">
+            <div class="col-md-10">
+                <label class="">Filtrar por dias</label>
+                @Html.DropDownList("Days", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <input type="submit" value="Buscar" class="btn btn-success">
+    }
+</div>
+
+<br />
+<hr />
+
+
+@*@using (Html.BeginForm("Search", "MoviePerCinemas", FormMethod.Get))
+{
+        @Html.TextBox("Parameter", null, new { @class = "form-control text-box" })
+        <input type="submit" value="Buscar" class="btn btn-success">
+    }*@
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table table-bordered table-responsive">
+    <tr>
+        <th>
+            Pelicula
+        </th>
+        <th>
+            Cine
+        </th>
+        <th>
+            Dias
+        </th>
+        <th>
+            Salas
+        </th>
+        <th>
+            Tandas
+        </th>
+        <th>
+            Director
+        </th>
+        <th>
+            Actor
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Direccion
+        </th>
+        @*<th></th>*@
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movie.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cinema.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Day.Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Room.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Schelude.Scheludes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actor.FullName)
+        </td>
+        <td class="">
+            @Html.DisplayFor(modelItem => item.Day.Price)
+        </td>
+        <td class="">
+            @Html.DisplayFor(modelItem => item.Cinema.Address)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MoviePerCinemaId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MoviePerCinemaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MoviePerCinemaId })
+        </td>*@
+    </tr>
+    }
+
+</table>

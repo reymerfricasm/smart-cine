@@ -1,0 +1,75 @@
+﻿@model RelationShipsExample.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Classification.Audience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classification.Audience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Studio.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Studio.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

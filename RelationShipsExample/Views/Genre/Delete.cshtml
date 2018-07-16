@@ -1,0 +1,32 @@
+﻿@model RelationShipsExample.Models.Genre
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete <b>@Model.Type</b></h2>
+
+<h3>¿Esta seguro de eliminar a <b>@Model.Type</b>?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Elimar" class="btn btn-danger" /> |
+            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-warning"})
+        </div>
+    }
+</div>
